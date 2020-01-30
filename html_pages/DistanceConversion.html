@@ -1,0 +1,29 @@
+</html>
+<head>
+<title> DISTANCE CONVERSION </title>
+</head>
+
+
+<body>
+<h2> Distance Conversion </h2>
+
+<p> Type in a value in feet to convert to inches </p>
+<form>
+Feet
+<!-- <input id="inputFeet" type="number" placeholder="Feet" oninput="feetToInches(this.value)" onchange="feetToInches(this.value)"</input> -->
+<input id="inputFeet" type="number" placeholder="Feet" </input>
+<button type="button" onclick="feetToInches(inputFeet.value)">Convert</button>
+
+	<!-- <input id="inputCelsius" type="number" placeholder="Celsius" oninput="celsiusToFahrenheit1(this.value)" onchange="celsiusToFahrenheit(this.value)"> -->
+	<!-- <input type="submit" value="Submit"> -->
+	
+</form>
+<p> Inches: 
+	<span id="outputInches"> </span>
+</p>
+
+<script src="java_scripts/Utilities.js">
+</script>
+
+</body>
+</html>
