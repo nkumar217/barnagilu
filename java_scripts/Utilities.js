@@ -13,3 +13,7 @@ function feetToInches(feet) {
 	document.getElementById("outputInches").innerHTML= valNum*12;
 }
 
+function mileToKM(mile) {
+	valNum = parseFloat(mile);
+	document.getElementById("outputKM").innerHTML = valNum * 1.6;
+}
