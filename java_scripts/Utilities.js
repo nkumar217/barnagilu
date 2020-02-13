@@ -18,12 +18,57 @@ function mileToKM(mile) {
 	document.getElementById("outputKM").innerHTML = valNum * 1.6;
 }
 
+function printMessage(str) {
+	var today = new Date();
+	var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+	alert("Hello.." + str);
+	alert("Today's date..." + date);
+}
+
+function calculateAge(dateOfBirth) {
+	/*var today = new Date(); */
+	
+	var today = formatDate();
+	var birthDate = new Date(dateOfBirth);
+	console.log("date of birth is::" + dateOfBirth);
+	console.log("Today's date is::" + today);
+	console.log(today.split("-")[2])
+	var age = parseInt(today.split("-")[2])-birthDate.getFullYear();
+	var month = parseInt(today.split("-")[0]) - birthDate.getMonth();
+	if (month < 0) {
+		month = month + 12;
+		age = age -1;
+	}
+	var days = parseInt(today.split("-")[1]) - birthDate.getDate();
+	
+	if (days < 0 ) {
+		days = days+30;
+		month = month-1;
+	}
+	alert("YOUR AGE IS\n"+ age + " Year(s)-" + month  + " Month(s)-" + days + " day(s)");
+}
+
+
+function formatDate() {
+    var d = new Date(),
+        month = '' + (d.getMonth()),
+        day = '' + d.getDate(),
+        year = d.getFullYear();
+
+    if (month.length < 2) 
+        month = '0' + month;
+    if (day.length < 2) 
+        day = '0' + day;
+
+    return [month, day, year].join('-');
+}
+
 function calculateDay(date, month, year) {
 	let dateStr = date;
 	let monthStr = month;
 	let yearStr = year;
 
-	/* (YY + (YY div 4)) mod 7; 
+	/* (YY + (YY div 4)) mod 7;
 	0 3 3 6 1 4 6 2 5 0 3 5 are magic numbers for the months
 	Jan-0, feb-3, mar-3, apr-6, may-1,jun-4
 	Jul-6, aug-2, sep-5, oct-0, nov-3, dec-5	
