@@ -1,23 +1,35 @@
+// Function to convert temperature
 function temperatureConverter1(valNum) {
 	valNum = parseFloat(valNum);
 	document.getElementById("outputCelsius").innerHTML=(valNum-32)/1.8;
 }
 
+/*
+Function to convert Celsius to Fahrenheit
+This function does not validate the input.
+*/
 function celsiusToFahrenheit1(celsius) {
 	valNum = parseFloat(celsius);
 	document.getElementById("ouputFahrenheit").innerHTML=(valNum*(9/5)) + 32;
 }
 
+// Function to convert feet to inches
 function feetToInches(feet) {
 	valNum = parseFloat(feet);
 	document.getElementById("outputInches").innerHTML= valNum*12;
 }
 
+/*
+Function to convert miles to KM
+*/
 function mileToKM(mile) {
 	valNum = parseFloat(mile);
 	document.getElementById("outputKM").innerHTML = valNum * 1.6;
 }
 
+/*
+Function to printMessage on the alert window.
+*/
 function printMessage(str) {
 	var today = new Date();
 	var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
@@ -25,6 +37,7 @@ function printMessage(str) {
 	alert("Today's date..." + date);
 }
 
+/* Function to calculate Age */
 function calculateAge(dateOfBirth) {
 	/*var today = new Date(); */
 	
@@ -48,7 +61,7 @@ function calculateAge(dateOfBirth) {
 	alert("YOUR AGE IS\n"+ age + " Year(s)-" + month  + " Month(s)-" + days + " day(s)");
 }
 
-
+/* Function to format date */
 function formatDate() {
     var d = new Date(),
         month = '' + (d.getMonth()),
@@ -125,3 +138,8 @@ function validateDate(var1, var2) {
 		} 
 	}
 }
+
+/*
+Demonstrate variable declaration
+*/
+

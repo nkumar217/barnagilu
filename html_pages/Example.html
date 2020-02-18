@@ -2,7 +2,7 @@
 
 <!-- header section starts here -->
 <head>
-<title> DATE CONVERSION </title>
+<title> EXAMPLE TITLE </title>
 </head>
 <!-- header section ends here -->
 
@@ -12,16 +12,103 @@
 <br>
 <br>
 
-<h2> Date Conversion </h2>
+<h2> DEMOS EXAMPLES </h2>
 
-<p> Enter your date of birth to find your age </p>
 <button type="button" onclick="printMessage('Kumar')">CLICK ME</button>
+<br>
+<br>
+<button type="button" onclick="variableDemo()">VARIABLE DEMO</button>
+<br>
+<br>
+<span id="helloMsg"> </span>
+<br>
+<br>
+<button type="button" onclick="loopDemo()">LOOP DEMO</button>
+<br>
+<br>
+
 
 <!-- Java script goes here -->
-<script> 
+<script type="text/javascript"> 
 function printMessage(str) {
 	alert("Hello.." + str);
+	confirm("Hello Confirm.." + str);
+	console.log("Hello.." + str);
+	document.getElementById("helloMsg").innerHTML = "Hello.." + str;
+	//document.write("Hello.." + str)
+	prompt("Hello" + str);
 }
+
+function loopDemo() {
+	array1= [10,20,30,40,50,60,70,80,90, 100];
+	console.log("FOR LOOP START");
+	for(var index in array1) {
+		console.log(array1[index]);
+	}
+	console.log("END:: FOR LOOP");
+	
+	let count = 0; 
+	console.log("START: while loop");
+	while ( count < array1.length) {
+		console.log(array1[count]+1);
+		count = count+1;
+	}
+	console.log("END: While loop");
+	
+	count = 0;
+	do {
+		console.log(array1[count]+2);
+		count = count +1;
+	} while (count < array1.length)
+}
+
+function variableDemo() {
+	let varl;
+	let var2 = 10; 
+	var var3;
+	var var4 = 20;
+	//console.log("VAR: var1==" + var1);
+	console.log("VAR: var2==" + var2);
+	console.log("VAR: var3==" + var3);
+	console.log("VAR: var4==" + var4);
+	var1 = 30; // Intitialize var1 
+	var3 = 40; // Intitialize var3
+	var2 = 50;
+	var4 = 60;
+	console.log("2nd Iteration values");
+	console.log("VAR: var1==" + var1);
+	console.log("VAR: var2==" + var2);
+	console.log("VAR: var3==" + var3);
+	console.log("VAR: var4==" + var4);
+	array1 = [1,2,3,4,5,6,7,8,9,10];
+	for(var i = 0; i <=array1.length; i++) {
+		console.log(i)
+	}
+	dict1 = { "firstname": "Kumar", "lastname": "Narayana"}
+	//for key in dict1.keys() {
+	for(var key in dict1) {
+		console.log(dict1[key]);
+	}
+	var1 = 100;
+	var2 = "100";
+	if (var1 == var2) { // If values are equal
+		console.log("1st IF:: Var1 and Var2 are equal");
+	}
+	if (var1 === var2) { // If values and type are equal
+		console.log("2nd IF:: Var1 and Var2 are equal and type is also eqaual");
+	}
+	var3 = 102;
+	var4 = 101;
+	if (var3 == var4 && var1 == var3) {
+		console.log("IF PASS");
+	} else if  ( !(var3 == var4)  || var1 == var3 ) {
+		console.log("ELSE IF PASS");
+	} else	{
+		console.log("FAIL");
+	}
+}
+
+
 </script>
 
 </body>
