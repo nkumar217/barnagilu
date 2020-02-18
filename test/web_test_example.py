@@ -23,7 +23,7 @@ class BarnagiluTestCase(unittest.TestCase):
         self.browser = webdriver.Edge("E:\\INTERVIEW_PREPARATION_DONT_DELETE\\barnagilu\\test\\msedgedriver.exe")     
         self.browser.get('http://www.barnagilu.com')
         time.sleep(5)
-        self.assertEqual('BARNAGILU', self.browser.title)
+        self.assertEqual('BARNAGILU1', self.browser.title)
         #self.assertEqual("https://www.barnagilu.com", self.browser.current_url)
         self.assertIn("barnagilu.com", self.browser.current_url)
         self.browser.quit()
