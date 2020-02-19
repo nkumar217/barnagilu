@@ -13,9 +13,12 @@ class BarnagiluTestCase(unittest.TestCase):
         # Optional argument, if not specified will search path. 
         self.browser.get('http://www.barnagilu.com')
         time.sleep(5)
+        self.browser.save_screenshot("chrome1.png")
         self.assertEqual('BARNAGILU', self.browser.title)
         #self.assertEqual("https://www.barnagilu.com", self.browser.current_url)
         self.assertIn("barnagilu.com", self.browser.current_url)
+        self.browser.save_screenshot("chrome2.png")
+
         self.browser.quit()
         self.browser = None
 
@@ -23,9 +26,12 @@ class BarnagiluTestCase(unittest.TestCase):
         self.browser = webdriver.Edge("E:\\INTERVIEW_PREPARATION_DONT_DELETE\\barnagilu\\test\\msedgedriver.exe")     
         self.browser.get('http://www.barnagilu.com')
         time.sleep(5)
+        self.browser.save_screenshot("edge1.png")
         self.assertEqual('BARNAGILU1', self.browser.title)
         #self.assertEqual("https://www.barnagilu.com", self.browser.current_url)
         self.assertIn("barnagilu.com", self.browser.current_url)
+        self.browser.save_screenshot("edge2.png")
+
         self.browser.quit()
 
     # def testIETitle(self):
