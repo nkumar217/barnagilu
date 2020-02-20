@@ -27,7 +27,7 @@ class BarnagiluTestCase(unittest.TestCase):
         self.browser.get('http://www.barnagilu.com')
         time.sleep(5)
         self.browser.save_screenshot("edge1.png")
-        self.assertEqual('BARNAGILU1', self.browser.title)
+        self.assertEqual('BARNAGILU', self.browser.title)
         #self.assertEqual("https://www.barnagilu.com", self.browser.current_url)
         self.assertIn("barnagilu.com", self.browser.current_url)
         self.browser.save_screenshot("edge2.png")
