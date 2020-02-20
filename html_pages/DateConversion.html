@@ -13,6 +13,21 @@
 <p> Enter your date of birth to find your age </p>
 <input id = "inputDate" type="date" placeholder="DOB">
 <button type="button" onclick="calculateAge(inputDate.value)">Find Age</button>
+<br>
+<br>
+<br>
+
+<p> Type in a value in DD MM YYYY format to find the day</p>
+<form>
+Date
+<input id="inputDate" type="number" placeholder="Date"  oninput="validateDate('date', this.value)" onchange="validateDate('date', this.value)"</input>
+<input id="inputMonth" type="number" placeholder="Month" oninput="validateDate('month', this.value)" onchange="validateDate('month', this.value)"</input>
+<input id="inputYear" type="number" placeholder="Year" oninput="validateDate('year', this.value)" onchange="validateDate('year', this.value)"</input>
+<button type="button" onclick="calculateDay(inputDate.value, inputMonth.value, inputYear.value)">Convert</button>
+</form>
+<p> 
+DAY: <span id="outputDay"> </span>
+</p>
 
 
 <script src="../java_scripts/Utilities.js">

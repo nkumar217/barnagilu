@@ -139,6 +139,11 @@ function validateDate(var1, var2) {
 	}
 }
 
+function GallonsToLitres(gallons) {
+    valNum = parseFloat(gallons);
+	document.getElementById("outputLitres").innerHTML = valNum * 3.78;
+}
+
 /*
 Demonstrate variable declaration
 */
