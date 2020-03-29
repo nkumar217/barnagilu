@@ -43,14 +43,14 @@ function calculateAge(dateOfBirth) {
 	
 	var today = formatDate();
 	var birthDate = new Date(dateOfBirth);
-	console.log("date of birth is::" + dateOfBirth);
+	console.log("date of birth is::" + birthDate);
 	console.log("Today's date is::" + today);
 	console.log(today.split("-")[2])
 	var age = parseInt(today.split("-")[2])-birthDate.getFullYear();
 	var month = parseInt(today.split("-")[0]) - birthDate.getMonth();
 	if (month < 0) {
 		month = month + 12;
-		age = age -1;
+		age = age - 1;
 	}
 	var days = parseInt(today.split("-")[1]) - birthDate.getDate();
 	
