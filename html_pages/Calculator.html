@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Calculator</title>
+</head>
+<body>
+  <!-- <input type="button" class="btn btn-lg btn-success" onclick="location.href='index.cshtml';" value="Home" /> -->
+<a href="/">Home</a>
+<br>
+<br>
+<h2> Calculator </h2>
+<p> Type two numbers</p>
+<p>
+	<label> Number-1</label>
+	<input id="inputNumber1" type="number" placeholder="number-1">
+	<label> Number-2</label>
+	<input id="inputNumber2" type="number" placeholder="number-2"> 
+    <button type="button" onclick="add(inputNumber1.value,inputNumber2.value)">Add</button> 
+    <button type="button" onclick="sub(inputNumber1.value,inputNumber2.value)">Sub</button> 
+    <button type="button" onclick="mul(inputNumber1.value,inputNumber2.value)">Mul</button> 
+    <button type="button" onclick="div(inputNumber1.value,inputNumber2.value)">Div</button> 
+
+    
+    </p>
+
+<p> Result: 
+	<span id="outputResult"> </span>
+</p>
+
+
+<script src="../java_scripts/Utilities.js">
+</script>
+
+</body>
+</html>

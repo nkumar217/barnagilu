@@ -144,6 +144,33 @@ function GallonsToLitres(gallons) {
 	document.getElementById("outputLitres").innerHTML = valNum * 3.78;
 }
 
+
+function add(valNum1, valNum2) {
+	valNum1 = parseFloat(valNum1);
+    valNum2 = parseFloat(valNum2);
+	document.getElementById("outputResult").innerHTML = valNum1 + valNum2;
+}
+
+function sub(valNum1, valNum2) {
+	valNum1 = parseFloat(valNum1);
+    valNum2 = parseFloat(valNum2);
+	document.getElementById("outputResult").innerHTML = valNum1 - valNum2;
+}
+
+function mul(valNum1, valNum2) {
+	valNum1 = parseFloat(valNum1);
+    valNum2 = parseFloat(valNum2);
+	document.getElementById("outputResult").innerHTML = valNum1 * valNum2;
+}
+
+function div(valNum1, valNum2) {
+	valNum1 = parseFloat(valNum1);
+    valNum2 = parseFloat(valNum2);
+	document.getElementById("outputResult").innerHTML = valNum1 / valNum2;
+}
+
+
+
 /*
 Demonstrate variable declaration
 */
