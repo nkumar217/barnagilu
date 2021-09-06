@@ -168,10 +168,3 @@ function div(valNum1, valNum2) {
     valNum2 = parseFloat(valNum2);
 	document.getElementById("outputResult").innerHTML = valNum1 / valNum2;
 }
-
-
-
-/*
-Demonstrate variable declaration
-*/
-
