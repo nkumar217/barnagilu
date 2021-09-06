@@ -9,7 +9,8 @@ class BarnagiluTestCase(unittest.TestCase):
         pass
         
     def testChromePageTitle(self):
-        self.browser = webdriver.Chrome('C:\\Users\\jdeep\\Desktop\\test\\chromedriver.exe')  
+        chrome_path = os.path.join(os.getcwd(), "chromedriver.exe")
+        self.browser = webdriver.Chrome(chrome_path)
         # Optional argument, if not specified will search path. 
         self.browser.get('http://www.barnagilu.com')
         time.sleep(5)
@@ -22,8 +23,12 @@ class BarnagiluTestCase(unittest.TestCase):
         self.browser.quit()
         self.browser = None
 
+
+
     def testEdgePageTitle(self):
-        self.browser = webdriver.Edge("E:\\INTERVIEW_PREPARATION_DONT_DELETE\\barnagilu\\test\\msedgedriver.exe")     
+
+        edge_path = os.path.join(os.getcwd(), "msedgedriver.exe")
+        self.browser = webdriver.Edge(edge_path)
         self.browser.get('http://www.barnagilu.com')
         time.sleep(5)
         self.browser.save_screenshot("edge1.png")
